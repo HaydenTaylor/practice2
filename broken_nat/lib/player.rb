@@ -11,8 +11,8 @@ class Player
   end
 
   def return_cards(deck)
-    hand.return_cards(deck)
-    self.hand = nil
+    @hand.return_cards(deck)
+    @hand = nil
   end
 
   def place_bet(dealer, bet_amt)

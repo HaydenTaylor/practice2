@@ -4,7 +4,7 @@ class Hand
   # object. This is in contrast to the `#initialize` method that
   # expects an `Array` of cards to hold.
   def self.deal_from(deck)
-    Hand.new(deck.take(2))
+    Hand.new(deck.take(2)){}
   end
 
   attr_accessor :cards
@@ -54,7 +54,7 @@ class Hand
 
   def return_cards(deck)
     deck.return(@cards)
-    @cards = []
+    @cards.clear
   end
 
   def to_s
